@@ -1,1 +1,32 @@
 # Docker---Mongo---Ubuntu
+
+-------Backup Mongodump 
+```bash
+docker exec -it tutor_local_mongodb_1 bash
+mongodump --out /data_backup/ 
+```
+
+------Mongo Basic Commands 
+```bash
+mongo
+show dbs
+use eat
+db
+db.movie.insert({"name":"tutorials point"})
+show collections
+db.movie.find().pretty()
+```
+
+------Delete Database
+```bash
+docker exec -it tutor_local_mongodb_1 bash
+mongo
+use eat
+db.dropDatabase()
+```
+
+--------Restore Mongodump
+```bash
+mongorestore  /data_backup/ 
+```
+
