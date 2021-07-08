@@ -3,7 +3,11 @@
 -------Backup Mongodump 
 ```bash
 docker exec -it tutor_local_mongodb_1 bash
+
 mongodump --out /data_backup/ 
+or
+mongodump --host localhost --port 27017  --out data_backup
+
 ```
 
 ------Mongo Basic Commands 
