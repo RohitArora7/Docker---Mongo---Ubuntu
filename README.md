@@ -34,3 +34,9 @@ db.dropDatabase()
 mongorestore  /data_backup/ 
 ```
 
+
+-- Docker One Line Command 
+```bash
+docker exec tutor_local_mongodb_1 sh -c 'mongodump --archive' > db.dump
+docker exec -i tutor_local_mongodb_1 sh -c 'mongorestore --archive' < db.dump
+```
